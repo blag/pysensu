@@ -56,7 +56,7 @@ class SensuAPI(object):
             ))
             return resp
 
-        elif resp.status_code.startswith('400'):
+        elif resp.status_code == 400:
             logger.error('{}: {}'.format(
                 resp.status_code,
                 resp.text
